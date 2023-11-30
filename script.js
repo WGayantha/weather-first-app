@@ -76,10 +76,9 @@ function getPublicIp() {
         method: "GET",
     })
         .then((response) => response.json())
-        .then((data) => {
-            console.log(data);
+        .then((data) => {          
             city = data.city;
-            getWeatherData(city);
+          getWeatherData(city);
         });
     return city;
 }
